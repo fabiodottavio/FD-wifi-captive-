@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Grazie</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1 style="margin:0 0 6px 0; color:var(--brand);">Grazie!</h1>
+      <p class="p">Perfetto. Ora potrai ricevere upgrade e consigli locali.</p>
+      <p class="small" id="meta"></p>
+      <a class="btn" href="./">Torna alla pagina</a>
+    </div>
+  </div>
+<script>
+  const p = new URLSearchParams(location.search);
+  const email = p.get("email") || "";
+  document.getElementById("meta").textContent = email ? `Email: ${email}` : "";
+</script>
+</body>
+</html>
