@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FD Apartments Guest Wi-Fi — Como</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" id="app">
+      <div class="header">
+        <div class="logo"><img src="../assets/logo.png" alt="FD Apartments" /></div>
+        <div>
+          <h1 id="t_title">FD Apartments Guest</h1>
+          <p class="sub" id="t_subtitle">Como • Wi-Fi per ospiti</p>
+        </div>
+      </div>
+
+      <div class="lang" aria-label="Language">
+        <button data-lang="it" class="active">IT</button>
+        <button data-lang="en">EN</button>
+        <button data-lang="de">DE</button>
+        <button data-lang="ar">AR</button>
+      </div>
+
+      <div class="hr"></div>
+
+      <!-- STEP 1 -->
+      <p class="stepTitle" id="t_step1">Step 1 — Termini & Privacy</p>
+      <p class="p" id="t_step1_desc">
+        Per continuare, accetta termini e privacy. Usi vietati: attività illegali, violazioni copyright, abuso rete.
+      </p>
+
+      <div class="check">
+        <input type="checkbox" id="c_terms" />
+        <label for="c_terms" class="small">
+          <span id="t_terms_lbl">Accetto</span>
+          <a href="./terms.html" target="_blank" rel="noopener">Termini</a>
+          <span id="t_and">e</span>
+          <a href="./privacy.html" target="_blank" rel="noopener">Privacy</a>
+        </label>
+      </div>
+
+      <div style="height:10px"></div>
+
+      <div class="check">
+        <input type="checkbox" id="c_mkt" />
+        <label for="c_mkt" class="small" id="t_mkt_lbl">
+          Acconsento a ricevere email marketing (offerte, upgrade, esperienze). Disiscrizione in qualsiasi momento.
+        </label>
+      </div>
+
+      <div style="height:12px"></div>
+      <button class="btn" id="btn_continue">Continua</button>
+
+      <div class="hr"></div>
+
+      <!-- STEP 2 -->
+      <div id="step2" style="display:none">
+        <p class="stepTitle" id="t_step2">Step 2 — Email + preferenze</p>
+        <p class="p" id="t_step2_desc">
+          Inserisci la tua email per ricevere upgrade in casa e una selezione rapida di attività a Como.
+        </p>
+
+        <!-- EMAIL: collegamento Brevo (static-friendly) -->
+        <form id="emailForm">
+          <input
+            id="email"
+            type="email"
+            placeholder="email@esempio.com"
+            required
+            style="width:100%; padding:12px 12px; border:1px solid var(--border); border-radius:12px; font-size:14px;"
+          />
+          <div style="height:10px"></div>
+
+          <!-- In fase 1: invio a thanks + istruzioni. Quando hai il form Brevo, sostituisci con embed/endpoint -->
+          <button class="btn" type="submit" id="btn_confirm">Conferma</button>
+
+          <p class="small" style="margin:10px 0 0 0" id="t_email_note">
+            Test: appena crei il form su Brevo, incolliamo qui l’embed e l’email viene salvata automaticamente.
+          </p>
+        </form>
+
+        <div style="height:14px"></div>
+
+        <div class="grid">
+          <div class="tile">
+            <h3 id="t_lco">Late check-out</h3>
+            <p id="t_lco_desc">€25 fino alle 13:00 (soggetto a disponibilità).</p>
+            <span class="badge" id="t_pay1">Pagamento: cash o Stripe (link da inserire)</span>
+          </div>
+
+          <div class="tile">
+            <h3 id="t_clean">Pulizia extra</h3>
+            <p id="t_clean_desc">€45 — richiedi entro le 17:00.</p>
+            <span class="badge" id="t_pay2">Pagamento: cash o Stripe (link da inserire)</span>
+          </div>
+
+          <div class="tile">
+            <h3 id="t_linen">Biancheria extra</h3>
+            <p id="t_linen_desc">Chiedi listino su WhatsApp.</p>
+          </div>
+
+          <div class="tile">
+            <h3 id="t_crib">Culla + lenzuola</h3>
+            <p id="t_crib_desc">€30</p>
+            <span class="badge" id="t_pay3">Pagamento: cash o Stripe (link da inserire)</span>
+          </div>
+
+          <div class="tile">
+            <h3 id="t_chair">Seggiolone</h3>
+            <p id="t_chair_desc">€30</p>
+            <span class="badge" id="t_pay4">Pagamento: cash o Stripe (link da inserire)</span>
+          </div>
+        </div>
+
+        <div style="height:14px"></div>
+        <button class="btn secondary" id="btn_whatsapp">WhatsApp assistenza</button>
+
+        <div class="hr"></div>
+
+        <p class="stepTitle" id="t_house">Info casa</p>
+        <p class="p" id="t_house_desc">
+          (Versione test) Qui inseriremo le info essenziali dell’appartamento. Per ora: scrivici su WhatsApp per qualsiasi necessità.
+        </p>
+
+        <div class="hr"></div>
+
+        <p class="stepTitle" id="t_local">Attività consigliate a Como</p>
+        <div class="grid">
+          <div class="tile">
+            <h3 id="t_boat">Boat tour</h3>
+            <p class="small">
+              • Bellagio Boat Tour<br/>
+              • Bellagio Sailing<br/>
+              • Lake Como Boat Tour (Il Medeghino)
+            </p>
+          </div>
+          <div class="tile">
+            <h3 id="t_food">Ristoranti</h3>
+            <p class="small">
+              • Il Gatto Nero (Cernobbio)<br/>
+              • Ristorante Sociale (Como)<br/>
+              • La Colombetta
+            </p>
+          </div>
+          <div class="tile">
+            <h3 id="t_transfer">Transfer</h3>
+            <p class="small">
+              • Como Driver (Malpensa ↔ Como)<br/>
+              • Malpensa Taxi Service
+            </p>
+          </div>
+        </div>
+
+        <p class="small" style="margin-top:12px" id="t_note">
+          Test: zero tracking. Se il ROI è buono, aggiungiamo tracking minimale + automatismi.
+        </p>
+      </div>
+    </div>
+  </div>
+
+<script>
+  const CONFIG = {
+    city: "Como",
+    whatsappNumber: "393780910646",
+    whatsappText: "Buongiorno avrei bisogno di informazioni, il mio nome è: "
+  };
+
+  const T = {
+    it: {
+      title: "FD Apartments Guest",
+      subtitle: `${CONFIG.city} • Wi-Fi per ospiti`,
+      step1: "Step 1 — Termini & Privacy",
+      step1_desc: "Per continuare, accetta termini e privacy. Usi vietati: attività illegali, violazioni copyright, abuso rete.",
+      terms_lbl: "Accetto", and:"e",
+      mkt_lbl: "Acconsento a ricevere email marketing (offerte, upgrade, esperienze). Disiscrizione in qualsiasi momento.",
+      continue:"Continua",
+      step2:"Step 2 — Email + preferenze",
+      step2_desc:"Inserisci la tua email per ricevere upgrade in casa e una selezione rapida di attività a Como.",
+      confirm:"Conferma",
+      email_note:"Test: appena crei il form su Brevo, incolliamo qui l’embed e l’email viene salvata automaticamente.",
+      wa:"WhatsApp assistenza",
+      house:"Info casa",
+      house_desc:"(Versione test) Qui inseriremo le info essenziali dell’appartamento. Per ora: scrivici su WhatsApp per qualsiasi necessità.",
+      local:"Attività consigliate a Como",
+      boat:"Boat tour", food:"Ristoranti", transfer:"Transfer",
+      note:"Test: zero tracking. Se il ROI è buono, aggiungiamo tracking minimale + automatismi."
+    },
+    en: {
+      title: "FD Apartments Guest",
+      subtitle: `${CONFIG.city} • Guest Wi-Fi`,
+      step1: "Step 1 — Terms & Privacy",
+      step1_desc: "To continue, accept terms & privacy. Prohibited: illegal activity, copyright infringement, network abuse.",
+      terms_lbl: "I accept", and:"and",
+      mkt_lbl: "I agree to receive marketing emails (offers, upgrades, experiences). Unsubscribe anytime.",
+      continue:"Continue",
+      step2:"Step 2 — Email + preferences",
+      step2_desc:"Enter your email to receive in-home upgrades and a quick selection of the best activities in Como.",
+      confirm:"Confirm",
+      email_note:"Test: once you create the Brevo form, we paste the embed here and your email will be stored automatically.",
+      wa:"WhatsApp support",
+      house:"House info",
+      house_desc:"(Test version) We’ll add key house info here. For now, message us on WhatsApp for anything you need.",
+      local:"Recommended in Como",
+      boat:"Boat tours", food:"Restaurants", transfer:"Transfers",
+      note:"Test: zero tracking. If ROI is good, we’ll add minimal tracking + automations."
+    },
+    de: {
+      title: "FD Apartments Guest",
+      subtitle: `${CONFIG.city} • Gäste-WLAN`,
+      step1: "Schritt 1 — AGB & Datenschutz",
+      step1_desc: "Zum Fortfahren AGB & Datenschutz akzeptieren. Verboten: illegale Aktivitäten, Urheberrechtsverletzungen, Netzwerk-Missbrauch.",
+      terms_lbl: "Ich akzeptiere", and:"und",
+      mkt_lbl: "Ich möchte Marketing-E-Mails erhalten (Angebote, Upgrades, Erlebnisse). Abmeldung jederzeit möglich.",
+      continue:"Weiter",
+      step2:"Schritt 2 — E-Mail + Auswahl",
+      step2_desc:"E-Mail eingeben, um Upgrades und Aktivitäten in Como zu erhalten.",
+      confirm:"Bestätigen",
+      email_note:"Test: Sobald das Brevo-Formular erstellt ist, fügen wir hier den Embed ein und die E-Mail wird gespeichert.",
+      wa:"WhatsApp-Support",
+      house:"Hausinfos",
+      house_desc:"(Testversion) Wichtige Hausinfos folgen. Bis dahin: WhatsApp.",
+      local:"Empfehlungen in Como",
+      boat:"Bootstouren", food:"Restaurants", transfer:"Transfers",
+      note:"Test: kein Tracking. Bei gutem ROI fügen wir minimales Tracking + Automationen hinzu."
+    },
+    ar: {
+      title: "FD Apartments Guest",
+      subtitle: `${CONFIG.city} • واي فاي للضيوف`,
+      step1: "الخطوة 1 — الشروط والخصوصية",
+      step1_desc: "للمتابعة، وافق على الشروط والخصوصية. ممنوع: أنشطة غير قانونية، انتهاك الحقوق، إساءة استخدام الشبكة.",
+      terms_lbl: "أوافق على", and:"و",
+      mkt_lbl: "أوافق على تلقي رسائل تسويقية عبر البريد الإلكتروني (عروض، ترقيات، تجارب). يمكنك إلغاء الاشتراك في أي وقت.",
+      continue:"متابعة",
+      step2:"الخطوة 2 — البريد الإلكتروني والتفضيلات",
+      step2_desc:"أدخل بريدك الإلكتروني للحصول على ترقيات داخل الشقة واقتراحات سريعة لأفضل الأنشطة في كومو.",
+      confirm:"تأكيد",
+      email_note:"تجربة: بعد إنشاء نموذج Brevo سنلصق الكود هنا ليتم حفظ البريد تلقائياً.",
+      wa:"دعم واتساب",
+      house:"معلومات الشقة",
+      house_desc:"(نسخة تجريبية) سنضيف معلومات الشقة هنا. حالياً: راسلنا عبر واتساب.",
+      local:"اقتراحات في كومو",
+      boat:"جولات بالقارب", food:"مطاعم", transfer:"تنقلات",
+      note:"تجربة: بدون تتبع. إذا كان العائد جيداً سنضيف تتبعاً بسيطاً وأتمتة."
+    }
+  };
+
+  const els = {
+    app: document.getElementById("app"),
+    step2: document.getElementById("step2"),
+    btnContinue: document.getElementById("btn_continue"),
+    btnWA: document.getElementById("btn_whatsapp"),
+    emailForm: document.getElementById("emailForm"),
+  };
+
+  function setLang(lang){
+    document.querySelectorAll(".lang button").forEach(b=>{
+      b.classList.toggle("active", b.dataset.lang === lang);
+    });
+    els.app.classList.toggle("rtl", lang === "ar");
+
+    const tr = T[lang];
+    document.getElementById("t_title").textContent = tr.title;
+    document.getElementById("t_subtitle").textContent = tr.subtitle;
+    document.getElementById("t_step1").textContent = tr.step1;
+    document.getElementById("t_step1_desc").textContent = tr.step1_desc;
+    document.getElementById("t_terms_lbl").textContent = tr.terms_lbl;
+    document.getElementById("t_and").textContent = tr.and;
+    document.getElementById("t_mkt_lbl").textContent = tr.mkt_lbl;
+    document.getElementById("btn_continue").textContent = tr.continue;
+
+    document.getElementById("t_step2").textContent = tr.step2;
+    document.getElementById("t_step2_desc").textContent = tr.step2_desc;
+    document.getElementById("btn_confirm").textContent = tr.confirm;
+    document.getElementById("t_email_note").textContent = tr.email_note;
+
+    document.getElementById("btn_whatsapp").textContent = tr.wa;
+
+    document.getElementById("t_house").textContent = tr.house;
+    document.getElementById("t_house_desc").textContent = tr.house_desc;
+
+    document.getElementById("t_local").textContent = tr.local;
+    document.getElementById("t_boat").textContent = tr.boat;
+    document.getElementById("t_food").textContent = tr.food;
+    document.getElementById("t_transfer").textContent = tr.transfer;
+
+    document.getElementById("t_note").textContent = tr.note;
+  }
+
+  document.querySelectorAll(".lang button").forEach(b=>{
+    b.addEventListener("click", ()=>setLang(b.dataset.lang));
+  });
+
+  els.btnContinue.addEventListener("click", ()=>{
+    const ok1 = document.getElementById("c_terms").checked;
+    const ok2 = document.getElementById("c_mkt").checked; // nel tuo requisito è obbligatorio
+    if(!ok1 || !ok2){
+      alert("Per continuare devi accettare Termini/Privacy e il consenso email marketing.");
+      return;
+    }
+    els.step2.style.display = "block";
+    els.btnContinue.disabled = true;
+    els.btnContinue.style.opacity = 0.6;
+    window.scrollTo({top: document.body.scrollHeight, behavior:"smooth"});
+  });
+
+  els.btnWA.addEventListener("click", ()=>{
+    const url = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(CONFIG.whatsappText)}`;
+    window.location.href = url;
+  });
+
+  els.emailForm.addEventListener("submit", (e)=>{
+    e.preventDefault();
+    const email = document.getElementById("email").value.trim();
+    if(!email) return;
+    // Fase 1: redirect a thanks (fase 2: qui inseriamo Brevo embed/endpoint)
+    const params = new URLSearchParams({email});
+    window.location.href = `./thanks.html?${params.toString()}`;
+  });
+
+  setLang("it");
+</script>
+</body>
+</html>
